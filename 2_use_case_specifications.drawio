@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="draw.io" version="21.0.0">
+  <diagram name="UC Specifications" id="uc-specs">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="0" page="1" pageScale="1" pageWidth="1654" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="MindReliever – Extended Use Case Specifications" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="1254" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- UC1 Table -->
+        <mxCell id="uc1_hdr" value="UC-01: Register Account" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="90" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc1_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-01&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Register Account&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;A new student creates a personal account to access the MindReliever platform securely.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student has internet access and a valid university email address.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. Student opens registration page. 2. Enters full name, university email, and password. 3. System validates email format and password strength. 4. System sends email verification link. 5. Student clicks verification link. 6. Account is activated. 7. Student is redirected to login page.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;3a. Email already exists – system shows error message. 3b. Weak password – system prompts user to strengthen password.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;A verified student account is created and stored in the database.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Exceptions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;System unavailable – user sees error and retries later.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="125" width="700" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- UC2 Table -->
+        <mxCell id="uc2_hdr" value="UC-02: Login to System" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="330" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc2_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-02&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Login to System&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student, System Administrator&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Registered users authenticate themselves to gain access to the system.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;User has a verified and active account.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. User navigates to login page. 2. Enters registered email and password. 3. System validates credentials. 4. System creates a session token. 5. User is redirected to their dashboard.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;3a. Wrong password – system shows error and allows retry (max 5 attempts). 3b. Account locked – system shows account locked message.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;User is authenticated and session is active.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Exceptions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Network error – login fails, user is prompted to retry.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="365" width="700" height="175" as="geometry" />
+        </mxCell>
+
+        <!-- UC3 Table -->
+        <mxCell id="uc3_hdr" value="UC-03: Take Self-Assessment Questionnaire" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc3_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-03&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Take Self-Assessment Questionnaire&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student completes a standardized mental wellness questionnaire to evaluate their current emotional state.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student is logged in. At least one questionnaire is available in the system.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. Student selects &quot;Take Assessment&quot; from dashboard. 2. System presents the questionnaire. 3. Student answers all questions. 4. Student submits the form. 5. System calculates wellness score. 6. System displays result summary and recommendations. [includes UC-04, UC-08]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;3a. Student leaves questions blank – system prompts to complete all questions before submission.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Assessment results saved to student profile. Recommendations generated.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Include&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;UC-04 (View Assessment Results), UC-08 (Receive Personalized Recommendations)&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="595" width="700" height="195" as="geometry" />
+        </mxCell>
+
+        <!-- UC4 Table -->
+        <mxCell id="uc4_hdr" value="UC-04: View Assessment Results" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="810" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc4_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-04&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;View Assessment Results&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student views the result of their completed mental wellness assessment including a wellness score and category.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student has completed at least one self-assessment (UC-03).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. System calculates wellness score from responses. 2. Score is categorized (Low / Moderate / High Stress). 3. Visual chart is displayed. 4. Summary feedback is shown. 5. Historical results comparison is available.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;No previous assessments – system only shows current result.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Result is displayed and stored. Student is prompted toward wellness resources.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="845" width="700" height="165" as="geometry" />
+        </mxCell>
+
+        <!-- UC5 Table -->
+        <mxCell id="uc5_hdr" value="UC-05: Track Daily Mood" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1030" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc5_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-05&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Track Daily Mood&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student logs their daily emotional state using emoji-based or scale-based mood selector.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student is logged in.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. Student opens mood tracker from dashboard. 2. Selects mood level (1–5 scale or emoji). 3. Optionally adds a short note. 4. Confirms submission. 5. System records mood entry with timestamp.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Duplicate entry for same day – system prompts to update or skip.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Mood entry saved. UC-06 (View History) extended by this use case.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Extended by&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;UC-06 (View Mood History &amp; Analytics)&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1065" width="700" height="190" as="geometry" />
+        </mxCell>
+
+        <!-- RIGHT COLUMN UC6–UC10 -->
+
+        <!-- UC6 -->
+        <mxCell id="uc6_hdr" value="UC-06: View Mood History &amp; Analytics" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="874" y="90" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc6_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-06&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;View Mood History &amp; Analytics&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student views their mood trends over time via line graphs and calendar heatmaps.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student has logged at least one mood entry (UC-05).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. Student selects &quot;Mood History&quot; from dashboard. 2. System retrieves stored mood entries. 3. System renders line chart and calendar heatmap. 4. Student can filter by date range. 5. Summary statistics shown (average mood, trend direction).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;No entries found for selected range – system displays informational message.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Mood analytics page is displayed with visual charts.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Extends&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;UC-05 (Track Daily Mood)&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="874" y="125" width="700" height="190" as="geometry" />
+        </mxCell>
+
+        <!-- UC7 -->
+        <mxCell id="uc7_hdr" value="UC-07: Browse Wellness Resources" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="874" y="335" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc7_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-07&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Browse Wellness Resources&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student explores the library of wellness articles, videos, and coping strategy guides available on the platform.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student is logged in. Resources have been added by Counseling Department.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. Student navigates to Resources section. 2. System displays categorized resources. 3. Student searches or filters by category. 4. Student selects a resource to read/view. 5. System records resource accessed for analytics.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;No resources found for search term – system shows &quot;No results&quot; message.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Resource is displayed. Access log updated.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="874" y="370" width="700" height="175" as="geometry" />
+        </mxCell>
+
+        <!-- UC8 -->
+        <mxCell id="uc8_hdr" value="UC-08: Receive Personalized Recommendations" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="874" y="565" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc8_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-08&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Receive Personalized Recommendations&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;System generates tailored wellness resource suggestions based on assessment results and mood patterns.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Assessment completed (UC-03). Resources exist in system.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. System processes assessment score and mood data. 2. Recommendation engine matches resources to stress category. 3. System displays top 3–5 personalized resources. 4. Student can mark recommendations as helpful or dismiss.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Insufficient data – system recommends general wellness resources.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Personalized resource list displayed on dashboard.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Included by&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;UC-03 (Take Self-Assessment Questionnaire)&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="874" y="600" width="700" height="190" as="geometry" />
+        </mxCell>
+
+        <!-- UC9 -->
+        <mxCell id="uc9_hdr" value="UC-09: Manage Wellness Resources (Admin)" style="text;html=1;strokeColor=#23445D;fillColor=#d5e8d4;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="874" y="810" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc9_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-09&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Manage Wellness Resources&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;System Administrator, Counseling Department&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Administrator or counseling staff add, edit, or remove wellness resources from the platform.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Actor is logged in with Admin or Counseling role.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. Actor opens content management panel. 2. Selects resource category. 3. Adds title, description, link/file, and tags. 4. Sets visibility (published/draft). 5. System saves and publishes resource.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Missing required fields – system shows validation error. Duplicate title – system warns before saving.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Resource is stored and available to students in UC-07.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#82b366;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="874" y="845" width="700" height="175" as="geometry" />
+        </mxCell>
+
+        <!-- UC10 -->
+        <mxCell id="uc10_hdr" value="UC-10: Update Profile Settings" style="text;html=1;strokeColor=#23445D;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="874" y="1040" width="700" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uc10_body" value="&lt;table border=&quot;1&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;font-size:11px;&quot;&gt;
+&lt;tr&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case ID&lt;/b&gt;&lt;/td&gt;&lt;td&gt;UC-10&lt;/td&gt;&lt;td width=&quot;25%&quot; style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Use Case Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Update Profile Settings&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Actor(s)&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student updates their personal information, password, or notification preferences in their profile.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Preconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Student is logged in.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Normal Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1. Student opens Profile Settings. 2. Edits desired fields (name, password, notifications). 3. Confirms changes. 4. System validates inputs. 5. System saves updated profile. 6. Confirmation message displayed.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Alternative Flow&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;New password does not meet requirements – system shows validation error.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;background:#f0f0f0;&quot;&gt;&lt;b&gt;Postconditions&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;Profile is updated in the database.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="874" y="1075" width="700" height="175" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

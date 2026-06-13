@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="draw.io" version="21.0.0">
+  <diagram name="SSD UC01 Register" id="ssd-uc01">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-01: Register Account" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <!-- Actor -->
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <!-- System Box -->
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="620" as="geometry" />
+        </mxCell>
+        <!-- Lifelines inside system -->
+        <mxCell id="ll_act" value="" style="endArrow=none;dashed=1;strokeColor=#23445D;" edge="1" parent="sys">
+          <mxGeometry x="160" y="30" width="1" height="590" relative="0" as="geometry"><Array as="points"><mxPoint x="160" y="30"/><mxPoint x="160" y="620"/></Array></mxGeometry>
+        </mxCell>
+
+        <!-- Messages actor -> system -->
+        <mxCell id="m1" value="1: submitRegistrationForm(name, email, password)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="200"/><mxPoint x="355" y="200"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: validateInputFields()" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="235" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="3: checkEmailUniqueness(email)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="270" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="4: hashPassword(password)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="305" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="5: createStudentAccount(name, email, hash)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="340" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="6: sendVerificationEmail(email)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="375" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="7: verifyEmail(token)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="430"/><mxPoint x="355" y="430"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r6" value="8: activateAccount(studentID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="460" width="280" height="25" as="geometry" />
+        </mxCell>
+        <!-- Response -->
+        <mxCell id="resp1" value="9: displaySuccessMessage('Account created. Please log in.')" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="515"/><mxPoint x="160" y="515"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC02 Login" id="ssd-uc02">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-02: Login to System" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: submitCredentials(email, password)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="200"/><mxPoint x="355" y="200"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: lookupUserByEmail(email)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="235" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="3: verifyPasswordHash(password, hash)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="270" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="4: checkAccountStatus(userID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="305" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="5: createSessionToken(userID, role)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="340" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="6: logLoginActivity(userID, timestamp)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="375" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="7: redirectToDashboard(sessionToken)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="430"/><mxPoint x="160" y="430"/></Array></mxGeometry>
+        </mxCell>
+        <!-- Alt flow note -->
+        <mxCell id="alt" value="ALT: Wrong password → return authError('Invalid credentials')" style="text;html=1;strokeColor=#FF0000;fillColor=#fff0f0;fontSize=11;align=left;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="460" width="360" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC03 Assessment" id="ssd-uc03">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-03: Take Self-Assessment Questionnaire" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: requestAssessment()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="190"/><mxPoint x="355" y="190"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: fetchAvailableAssessments(studentID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="225" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="3: displayAssessmentList(assessments)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="275"/><mxPoint x="160" y="275"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="4: selectAssessment(assessmentID)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="310"/><mxPoint x="355" y="310"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r2" value="5: loadQuestions(assessmentID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="345" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp2" value="6: renderQuestionnaire(questions[])" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="395"/><mxPoint x="160" y="395"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="7: submitAnswers(responses[])" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="430"/><mxPoint x="355" y="430"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r3" value="8: validateAllAnswered(responses)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="460" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="9: calculateWellnessScore(responses)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="490" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="10: categorizeStressLevel(score)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="520" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" value="11: saveResult(studentID, score, stressLevel)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="550" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp3" value="12: displayResults(score, stressLevel, recommendations)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="600"/><mxPoint x="160" y="600"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC04 Results" id="ssd-uc04">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-04: View Assessment Results" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: openResultsPage()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="195"/><mxPoint x="355" y="195"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: fetchResultHistory(studentID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="230" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="3: computeProgressTrend(results[])" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="265" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="4: prepareChartData(results, trend)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="5: renderResultsDashboard(chartData, latestScore, feedback)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="360"/><mxPoint x="160" y="360"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="6: selectPreviousResult(resultID) [optional]" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="395"/><mxPoint x="355" y="395"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="resp2" value="7: displayDetailedResult(resultDetails)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="440"/><mxPoint x="160" y="440"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC05 Mood" id="ssd-uc05">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-05: Track Daily Mood" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: openMoodTracker()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="195"/><mxPoint x="355" y="195"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: checkExistingEntryToday(studentID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="230" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="3: displayMoodSelector(moodOptions)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="280"/><mxPoint x="160" y="280"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="4: submitMoodEntry(moodLevel, note)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="315"/><mxPoint x="355" y="315"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r2" value="5: validateMoodLevel(moodLevel)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="350" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="6: saveMoodEntry(studentID, moodLevel, note, timestamp)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="380" width="360" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp2" value="7: displayConfirmation('Mood logged successfully')" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="435"/><mxPoint x="160" y="435"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC06 Mood History" id="ssd-uc06">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-06: View Mood History &amp; Analytics" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: openMoodHistory()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="195"/><mxPoint x="355" y="195"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: fetchMoodEntries(studentID, defaultRange=30days)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="230" width="350" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="3: computeAverageMood(entries[])" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="265" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="4: buildLineChartData(entries)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="5: buildCalendarHeatmap(entries)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="335" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="6: renderAnalyticsPage(lineChart, heatmap, avgMood)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="390"/><mxPoint x="160" y="390"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="7: filterByDateRange(startDate, endDate) [optional]" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="430"/><mxPoint x="355" y="430"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="resp2" value="8: updateCharts(filteredData)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="475"/><mxPoint x="160" y="475"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC07 Resources" id="ssd-uc07">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-07: Browse Wellness Resources" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: openResourcesLibrary()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="195"/><mxPoint x="355" y="195"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: fetchPublishedResources()" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="230" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="3: groupByCategory(resources[])" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="265" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="4: renderResourceCatalog(categorizedResources)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="315"/><mxPoint x="160" y="315"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="5: searchResources(keyword) [optional]" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="350"/><mxPoint x="355" y="350"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="resp2" value="6: displaySearchResults(matchingResources)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="395"/><mxPoint x="160" y="395"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="7: selectResource(resourceID)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="430"/><mxPoint x="355" y="430"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r3" value="8: logResourceAccess(studentID, resourceID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="462" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp3" value="9: displayResourceContent(resource)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="510"/><mxPoint x="160" y="510"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC08 Recommendations" id="ssd-uc08">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-08: Receive Personalized Recommendations" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: triggerRecommendationEngine(studentID)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="190"/><mxPoint x="355" y="190"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: getLatestAssessmentResult(studentID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="225" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="3: getRecentMoodAverage(studentID, days=7)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="260" width="310" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="4: matchResourcesByStressCategory(stressLevel)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="295" width="320" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="5: rankAndSelectTopResources(matches, limit=5)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="330" width="320" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="6: saveRecommendation(studentID, resources[])" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="365" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="7: displayPersonalizedResources(recommendations)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="420"/><mxPoint x="160" y="420"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="8: markRecommendationHelpful(recommendationID, isHelpful)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="455"/><mxPoint x="355" y="455"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="resp2" value="9: updateRecommendationFeedback()" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="500"/><mxPoint x="160" y="500"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC09 Manage Resources" id="ssd-uc09">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-09: Manage Wellness Resources (Admin)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="System&#xa;Administrator" style="shape=mxgraph.uml.actor;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="70" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: openContentManagementPanel()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="195"/><mxPoint x="355" y="195"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: loadAllResources()" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="230" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="3: renderResourceList(resources)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="280"/><mxPoint x="160" y="280"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="4: submitNewResource(title, description, url, category, tags)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="315"/><mxPoint x="355" y="315"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r2" value="5: validateResourceFields(data)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="350" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="6: checkDuplicateTitle(title)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="385" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="7: saveResource(resourceData, status=published)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="420" width="310" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp2" value="8: displaySuccess('Resource published successfully')" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="475"/><mxPoint x="160" y="475"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="SSD UC10 Profile" id="ssd-uc10">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD – UC-10: Update Profile Settings" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="900" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Student" style="shape=mxgraph.uml.actor;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="75" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="MindReliever System" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#23445D;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="75" width="640" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1: openProfileSettings()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="195"/><mxPoint x="355" y="195"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r1" value="2: fetchCurrentProfile(studentID)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="230" width="260" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp1" value="3: renderProfileForm(currentData)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="280"/><mxPoint x="160" y="280"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="4: submitUpdatedProfile(updatedFields)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor" target="sys">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="315"/><mxPoint x="355" y="315"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="r2" value="5: validateProfileData(updatedFields)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="350" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="6: hashNewPassword(newPassword) [if changed]" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="385" width="310" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="7: updateProfileInDatabase(studentID, updatedData)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="380" y="420" width="320" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="resp2" value="8: displaySuccess('Profile updated successfully')" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="sys" target="actor">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="355" y="475"/><mxPoint x="160" y="475"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="alt" value="ALT: Validation fails → return validationError(fieldName, message)" style="text;html=1;strokeColor=#FF0000;fillColor=#fff0f0;fontSize=11;align=left;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="500" width="380" height="28" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+</mxfile>

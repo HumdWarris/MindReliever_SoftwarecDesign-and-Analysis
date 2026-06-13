@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="draw.io" version="21.0.0">
+  <diagram name="Domain Model" id="domain-model">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="MindReliever – Domain Model Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="427" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Student Class -->
+        <mxCell id="student" value="Student" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="student_attrs" value="- studentID: String&#xa;- fullName: String&#xa;- email: String&#xa;- passwordHash: String&#xa;- isAnonymous: Boolean&#xa;- registrationDate: Date&#xa;- isVerified: Boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="0" y="30" width="240" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- UserProfile Class -->
+        <mxCell id="profile" value="UserProfile" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="profile_attrs" value="- profileID: String&#xa;- preferredName: String&#xa;- notificationEnabled: Boolean&#xa;- privacyLevel: Enum&#xa;- lastUpdated: Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="profile">
+          <mxGeometry x="0" y="30" width="240" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Assessment Class -->
+        <mxCell id="assessment" value="Assessment" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="420" y="120" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="assessment_attrs" value="- assessmentID: String&#xa;- title: String&#xa;- description: String&#xa;- category: Enum&#xa;- totalQuestions: Integer&#xa;- isActive: Boolean&#xa;- createdDate: Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="assessment">
+          <mxGeometry x="0" y="30" width="240" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- AssessmentResult Class -->
+        <mxCell id="result" value="AssessmentResult" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="420" y="360" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="result_attrs" value="- resultID: String&#xa;- score: Integer&#xa;- maxScore: Integer&#xa;- stressLevel: Enum&#xa;- completedDate: DateTime&#xa;- feedbackText: String&#xa;- studentID: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="result">
+          <mxGeometry x="0" y="30" width="240" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Question Class -->
+        <mxCell id="question" value="Question" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="700" y="120" width="240" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="question_attrs" value="- questionID: String&#xa;- questionText: String&#xa;- questionType: Enum&#xa;- orderIndex: Integer&#xa;- isMandatory: Boolean&#xa;- assessmentID: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="question">
+          <mxGeometry x="0" y="30" width="240" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- MoodEntry Class -->
+        <mxCell id="mood" value="MoodEntry" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="700" width="240" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="mood_attrs" value="- entryID: String&#xa;- moodLevel: Integer (1-5)&#xa;- note: String&#xa;- entryDate: DateTime&#xa;- studentID: String&#xa;- moodLabel: Enum" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="mood">
+          <mxGeometry x="0" y="30" width="240" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- WellnessResource Class -->
+        <mxCell id="resource" value="WellnessResource" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="700" y="360" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="resource_attrs" value="- resourceID: String&#xa;- title: String&#xa;- description: String&#xa;- resourceType: Enum&#xa;- category: Enum&#xa;- url: String&#xa;- isPublished: Boolean&#xa;- uploadedDate: Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="resource">
+          <mxGeometry x="0" y="30" width="240" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Recommendation Class -->
+        <mxCell id="recommendation" value="Recommendation" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="700" y="600" width="240" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="recommendation_attrs" value="- recommendationID: String&#xa;- generatedDate: DateTime&#xa;- stressCategory: Enum&#xa;- studentID: String&#xa;- isHelpful: Boolean&#xa;- resourceIDs: List" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="recommendation">
+          <mxGeometry x="0" y="30" width="240" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- Administrator Class -->
+        <mxCell id="admin" value="Administrator" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="200" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_attrs" value="- adminID: String&#xa;- fullName: String&#xa;- email: String&#xa;- role: Enum&#xa;- lastLogin: DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="admin">
+          <mxGeometry x="0" y="30" width="240" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Notification Class -->
+        <mxCell id="notif" value="Notification" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="420" y="600" width="240" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="notif_attrs" value="- notificationID: String&#xa;- message: String&#xa;- type: Enum&#xa;- sentDate: DateTime&#xa;- isRead: Boolean&#xa;- studentID: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="notif">
+          <mxGeometry x="0" y="30" width="240" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <!-- Student has 1 UserProfile -->
+        <mxCell id="rel1" value="has" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="student" target="profile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1_card1" value="1" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="185" y="382" width="20" height="20" as="geometry" /></mxCell>
+        <mxCell id="rel1_card2" value="1" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="185" y="428" width="20" height="20" as="geometry" /></mxCell>
+
+        <!-- Student completes many AssessmentResult -->
+        <mxCell id="rel2" value="completes" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="student" target="result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2_card1" value="1" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="328" y="380" width="20" height="20" as="geometry" /></mxCell>
+        <mxCell id="rel2_card2" value="0..*" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="395" y="380" width="30" height="20" as="geometry" /></mxCell>
+
+        <!-- Assessment has many Questions -->
+        <mxCell id="rel3" value="contains" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="assessment" target="question">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3_card1" value="1" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="668" y="185" width="20" height="20" as="geometry" /></mxCell>
+        <mxCell id="rel3_card2" value="1..*" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="695" y="185" width="30" height="20" as="geometry" /></mxCell>
+
+        <!-- AssessmentResult belongs to Assessment -->
+        <mxCell id="rel4" value="based on" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="result" target="assessment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Student logs many MoodEntries -->
+        <mxCell id="rel5" value="logs" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="student" target="mood">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5_card1" value="1" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="145" y="628" width="20" height="20" as="geometry" /></mxCell>
+        <mxCell id="rel5_card2" value="0..*" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="145" y="695" width="30" height="20" as="geometry" /></mxCell>
+
+        <!-- Admin manages WellnessResource -->
+        <mxCell id="rel6" value="manages" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="admin" target="resource">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Recommendation links to WellnessResource -->
+        <mxCell id="rel7" value="contains" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="recommendation" target="resource">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- AssessmentResult triggers Recommendation -->
+        <mxCell id="rel8" value="triggers" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="result" target="recommendation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Student receives Notification -->
+        <mxCell id="rel9" value="receives" style="endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;" edge="1" parent="1" source="student" target="notif">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="920" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="920" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="" style="swimlane;fillColor=#dae8fc;strokeColor=#6c8ebf;startSize=20;" vertex="1" parent="1">
+          <mxGeometry x="95" y="950" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="l1t" value="Student Entity" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="185" y="950" width="140" height="25" as="geometry" /></mxCell>
+        <mxCell id="l2" value="" style="swimlane;fillColor=#d5e8d4;strokeColor=#82b366;startSize=20;" vertex="1" parent="1">
+          <mxGeometry x="95" y="980" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="l2t" value="Assessment Entity" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="185" y="980" width="140" height="25" as="geometry" /></mxCell>
+        <mxCell id="l3" value="" style="swimlane;fillColor=#f8cecc;strokeColor=#b85450;startSize=20;" vertex="1" parent="1">
+          <mxGeometry x="95" y="1010" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="l3t" value="Resource Entity" style="text;fontSize=11;" vertex="1" parent="1"><mxGeometry x="185" y="1010" width="140" height="25" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

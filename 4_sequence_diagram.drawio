@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="draw.io" version="21.0.0">
+  <diagram name="Sequence Diagram" id="sequence-diagram">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="MindReliever – Sequence Diagram: Take Self-Assessment Questionnaire" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="1400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Lifeline headers -->
+        <mxCell id="lh_student" value="Student" style="shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lh_ui" value=":UI / Browser" style="shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lh_controller" value=":Assessment&#xa;Controller" style="shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="80" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lh_db" value=":Database" style="shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lh_rec" value=":Recommendation&#xa;Engine" style="shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="80" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Lifeline vertical lines -->
+        <mxCell id="ll_student" value="" style="points=[[0.5,0],[0.5,1]];shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="140" width="1" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="ll_ui" value="" style="points=[[0.5,0],[0.5,1]];shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;strokeColor=#d6b656;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="385" y="140" width="1" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="ll_ctrl" value="" style="points=[[0.5,0],[0.5,1]];shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="625" y="140" width="1" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="ll_db" value="" style="points=[[0.5,0],[0.5,1]];shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="860" y="140" width="1" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="ll_rec" value="" style="points=[[0.5,0],[0.5,1]];shape=mxgraph.uml.lifeline;whiteSpace=wrap;html=1;strokeColor=#b85450;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="140" width="1" height="900" as="geometry" />
+        </mxCell>
+
+        <!-- Activation boxes -->
+        <mxCell id="act_student1" value="" style="html=1;shape=mxgraph.uml.activate;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="153" y="190" width="14" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="act_ui1" value="" style="html=1;shape=mxgraph.uml.activate;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="378" y="220" width="14" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="act_ctrl1" value="" style="html=1;shape=mxgraph.uml.activate;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="618" y="280" width="14" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="act_db1" value="" style="html=1;shape=mxgraph.uml.activate;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="853" y="310" width="14" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="act_rec1" value="" style="html=1;shape=mxgraph.uml.activate;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="580" width="14" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Messages -->
+        <!-- 1 Student -> UI: openAssessmentPage() -->
+        <mxCell id="m1" value="1: openAssessmentPage()" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_student1" target="act_ui1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="160" y="200"/><mxPoint x="385" y="200"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 2 UI -> Controller: requestAvailableAssessments() -->
+        <mxCell id="m2" value="2: requestAvailableAssessments(studentID)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_ui1" target="act_ctrl1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="385" y="250"/><mxPoint x="625" y="250"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 3 Controller -> DB: fetchAssessments() -->
+        <mxCell id="m3" value="3: fetchActiveAssessments()" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_ctrl1" target="act_db1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="625" y="310"/><mxPoint x="860" y="310"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 4 DB -> Controller: return assessmentList -->
+        <mxCell id="m4" value="4: return assessmentList[]" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="act_db1" target="act_ctrl1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="860" y="360"/><mxPoint x="625" y="360"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 5 Controller -> UI: displayAssessments -->
+        <mxCell id="m5" value="5: displayAssessmentList(assessments)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="act_ctrl1" target="act_ui1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="625" y="400"/><mxPoint x="385" y="400"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 6 Student selects assessment -->
+        <mxCell id="m6" value="6: selectAssessment(assessmentID)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_student1" target="act_ui1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="160" y="430"/><mxPoint x="385" y="430"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 7 UI -> Controller: loadQuestions -->
+        <mxCell id="m7" value="7: loadQuestions(assessmentID)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_ui1" target="act_ctrl1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="385" y="460"/><mxPoint x="625" y="460"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 8 Controller -> DB: getQuestions -->
+        <mxCell id="act_db2" value="" style="html=1;shape=mxgraph.uml.activate;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="853" y="480" width="14" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="m8" value="8: getQuestions(assessmentID)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_ctrl1" target="act_db2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="625" y="490"/><mxPoint x="860" y="490"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="9: return questions[]" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="act_db2" target="act_ctrl1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="860" y="530"/><mxPoint x="625" y="530"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="10: renderQuestionnaire(questions)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="act_ctrl1" target="act_ui1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="625" y="560"/><mxPoint x="385" y="560"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 11 Student answers and submits -->
+        <mxCell id="m11" value="11: submitAnswers(responses[])" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_student1" target="act_ui1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="160" y="590"/><mxPoint x="385" y="590"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 12 UI -> Controller: processAssessment -->
+        <mxCell id="m12" value="12: processAssessment(studentID, responses)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_ui1" target="act_ctrl1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="385" y="620"/><mxPoint x="625" y="620"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 13 Controller -> Recommendation Engine -->
+        <mxCell id="m13" value="13: generateRecommendations(score, stressLevel)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_ctrl1" target="act_rec1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="625" y="590"/><mxPoint x="1110" y="590"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="14: return recommendations[]" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="act_rec1" target="act_ctrl1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1110" y="650"/><mxPoint x="625" y="650"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 15 Controller -> DB: saveResult -->
+        <mxCell id="act_db3" value="" style="html=1;shape=mxgraph.uml.activate;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="853" y="668" width="14" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m15" value="15: saveAssessmentResult(result, recommendations)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="act_ctrl1" target="act_db3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="625" y="680"/><mxPoint x="860" y="680"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m16" value="16: saveSuccess" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="act_db3" target="act_ctrl1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="860" y="715"/><mxPoint x="625" y="715"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 17 Return results to UI -->
+        <mxCell id="m17" value="17: displayResultsAndRecommendations(result)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="act_ctrl1" target="act_ui1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="625" y="745"/><mxPoint x="385" y="745"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 18 UI shows student -->
+        <mxCell id="m18" value="18: showResultsPage(score, feedback, recommendations)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontSize=11;" edge="1" parent="1" source="act_ui1" target="act_student1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="385" y="775"/><mxPoint x="160" y="775"/></Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

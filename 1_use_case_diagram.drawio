@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="draw.io" version="21.0.0">
+  <diagram name="Use Case Diagram" id="use-case-diagram">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="MindReliever – Use Case Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="427" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- System Boundary -->
+        <mxCell id="sys_boundary" value="MindReliever System" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.flowchart.start_2;fillColor=none;strokeColor=#23445D;fontSize=14;fontStyle=1;verticalAlign=top;swimlaneHead=0;align=center;swimlane=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="920" height="980" as="geometry" />
+        </mxCell>
+
+        <!-- Actor: Student -->
+        <mxCell id="actor_student" value="Student" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="460" width="60" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Actor: Admin -->
+        <mxCell id="actor_admin" value="System&#xa;Administrator" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="350" width="60" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Actor: Counseling Dept -->
+        <mxCell id="actor_counseling" value="Counseling&#xa;Department" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="700" width="60" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases - Student side -->
+        <mxCell id="uc1" value="Register Account" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="120" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc2" value="Login to System" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="210" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc3" value="Take Self-Assessment&#xa;Questionnaire" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="320" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc4" value="View Assessment&#xa;Results" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="420" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc5" value="Track Daily Mood" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="520" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc6" value="View Mood History&#xa;&amp; Analytics" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="620" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc7" value="Browse Wellness&#xa;Resources" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="720" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc8" value="Receive Personalized&#xa;Recommendations" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="820" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc9" value="Update Profile&#xa;Settings" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="920" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases - Admin side -->
+        <mxCell id="uc10" value="Manage User Accounts" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="150" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc11" value="Manage Wellness&#xa;Resources &amp; Content" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="260" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc12" value="View System&#xa;Usage Reports" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="370" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc13" value="Manage Assessment&#xa;Questionnaires" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="480" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases - Counseling side -->
+        <mxCell id="uc14" value="Upload / Approve&#xa;Wellness Resources" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="680" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc15" value="View Anonymized&#xa;Wellness Trends" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="790" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Extend / Include relationships -->
+        <!-- <<include>> UC3 -> UC4 -->
+        <mxCell id="inc1" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=11;fontStyle=2;" edge="1" parent="1" source="uc3" target="uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- <<include>> UC3 -> UC8 -->
+        <mxCell id="inc2" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=11;fontStyle=2;" edge="1" parent="1" source="uc3" target="uc8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- <<extend>> UC6 -> UC5 -->
+        <mxCell id="ext1" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=11;fontStyle=2;" edge="1" parent="1" source="uc6" target="uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Student associations -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_student" target="uc1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_student" target="uc2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_student" target="uc3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_student" target="uc5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_student" target="uc6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_student" target="uc7"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_student" target="uc9"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Admin associations -->
+        <mxCell id="a1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_admin" target="uc10"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_admin" target="uc11"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_admin" target="uc12"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_admin" target="uc13"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Counseling associations -->
+        <mxCell id="c1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_counseling" target="uc14"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="c2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_counseling" target="uc15"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Generalization: Admin inherits Login -->
+        <mxCell id="gen1" value="" style="endArrow=block;endFill=0;endSize=16;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="actor_admin" target="uc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
